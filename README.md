@@ -1,3 +1,3 @@
 
-# duke-hugoViaAWS
-CD pipeline using Hugo and AWS-S3 
+CD pipeline using Hugo and AWS-S3. 
+Webhooks directly into this git repo. 
