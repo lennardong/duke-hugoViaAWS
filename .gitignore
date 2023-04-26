@@ -132,6 +132,10 @@ venv.bak/
 .spyderproject
 .spyproject
 
+# hugo stuff
+public/
+public
+
 # Rope project settings
 .ropeproject
 
