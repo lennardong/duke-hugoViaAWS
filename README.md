@@ -2,4 +2,4 @@
 
 
 # duke-hugoViaAWS
-CD pipeline using Hugo and AWSS3 
+CD pipeline using Hugo and AWS-S3 
