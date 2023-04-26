@@ -6,7 +6,7 @@ environment_variables:
     
 phases:
   install:
-    runtime-versions:
+    runtimeVersions:
       docker: 20
     commands:                                                                 
       - cd /tmp
