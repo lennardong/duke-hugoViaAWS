@@ -9,18 +9,11 @@ phases:
     runtimeVersions:
       docker: 20
     commands:                                                                 
-      - cd /tmp
-      - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-      - tar -xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-      - mv hugo /usr/bin/hugo
-      - cd - 
-      - rm -rf /tmp/*
+      - make hugo
   build:
     commands:
-      - rm -rf public
-      - hugo --verbose 
-#       - aws s3 sync public/ s3://duke-hugo-s3/ --region ap-southeast-2 --delete
-      - aws s3 sync public/ s3://duke-hugo-s3/ --region ap-southeast-2 --delete
+      - make build
+      - make deploy
   post_build:
     commands:
       - echo Build completed on `date`
