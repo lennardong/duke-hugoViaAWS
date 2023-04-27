@@ -18,9 +18,9 @@ phases:
   build:
     commands:
       - rm -rf public
-      - hugo
+      - hugo --verbose 
 #       - aws s3 sync public/ s3://duke-hugo-s3/ --region ap-southeast-2 --delete
-      - aws s3 sync public/ s3://duke-hugo-s3/ --region ap-southeast-2
+      - aws s3 sync public/ s3://duke-hugo-s3/ --region ap-southeast-2 --delete
   post_build:
     commands:
       - echo Build completed on `date`
