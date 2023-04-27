@@ -18,6 +18,9 @@ build:
 	rm -rf public
 	hugo
 
+preview: 
+	hugo server -D
+	
 deploy:
 	aws s3 sync public/ s3://$(S3_BUCKET)/ --region $(AWS_REGION) --delete
 
